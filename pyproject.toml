@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "advent2020"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+packages = [
+    { include = "advent",  from = "."}
+]
+
+[tool.poetry.scripts]
+advent = "advent.cli:day"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+click = "^7.1.2"
+
+[tool.pylint.basic]
+good-names = "c,i,j,f,k,ex,Run,_,df"
+disable =[
+    "missing-module-docstring"
+]
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.1.2"
+black = "^20.8b1"
+isort = "^5.6.4"
+pylint = "^2.6.0"
+
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
