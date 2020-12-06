@@ -26,11 +26,13 @@ def day(day_num: int) -> None:
     input_filename = get_input_filename_for_day(day_num)
 
     start_t = time.perf_counter()
-    first_result = day_module.first(input_filename)
+    with open(input_filename) as reader:
+        first_result = day_module.first(reader)
     first_t = time.perf_counter()
     click.echo(f"First: {first_result} ({first_t - start_t:.2}s)")
 
-    second_result = day_module.second(input_filename)
+    with open(input_filename) as reader:
+        second_result = day_module.second(reader)
     second_t = time.perf_counter()
     click.echo(f"Second: {second_result} ({second_t - first_t:.2}s)")
 

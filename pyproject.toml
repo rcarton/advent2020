@@ -2,7 +2,7 @@
 name = "advent2020"
 version = "0.1.0"
 description = ""
-authors = ["Your Name <you@example.com>"]
+authors = ["Remi <remi.carton@gmail.com>"]
 packages = [
     { include = "advent",  from = "."}
 ]
@@ -15,9 +15,10 @@ python = "^3.8"
 click = "^7.1.2"
 
 [tool.pylint.basic]
-good-names = "c,i,j,f,k,ex,Run,_,df"
-disable =[
-    "missing-module-docstring"
+good-names = "c,i,j,f,k,ex,Run,_,df,m"
+disable = [
+    "missing-module-docstring",
+    "missing-function-docstring"
 ]
 
 [tool.poetry.dev-dependencies]

@@ -1,8 +1,8 @@
 import itertools as its
-from pathlib import Path
+from typing import Iterator
 
 
-def first_combinations(filename: Path) -> int:
+def first_combinations(expense_input: Iterator[str]) -> int:
     """
     The laziest approach.
 
@@ -18,8 +18,7 @@ def first_combinations(filename: Path) -> int:
 
     """
 
-    with open(filename) as reader:
-        expenses = [int(line) for line in reader]
+    expenses = [int(line) for line in expense_input]
 
     for c in its.combinations(expenses, 2):
         if sum(c) == 2020:
@@ -28,11 +27,10 @@ def first_combinations(filename: Path) -> int:
     raise ValueError("No combination of two expenses adds up to 2020")
 
 
-def second_combinations(filename: Path) -> int:
+def second_combinations(expense_input: Iterator[str]) -> int:
     """Same approach, but this looks at 3-combinations."""
 
-    with open(filename) as reader:
-        expenses = [int(line) for line in reader]
+    expenses = [int(line) for line in expense_input]
 
     for c in its.combinations(expenses, 3):
         if sum(c) == 2020:
