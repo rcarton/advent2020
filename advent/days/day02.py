@@ -46,8 +46,7 @@ def parse_policy(policy_str: str) -> PasswordPolicy:
     )
     groups = m.groupdict()
     return PasswordPolicy(
-        int(groups["first_value"]), int(
-            groups["second_value"]), groups["letter"]
+        int(groups["first_value"]), int(groups["second_value"]), groups["letter"]
     )
 
 
