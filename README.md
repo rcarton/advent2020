@@ -1,6 +1,6 @@
-# advent2020
-Advent Of Code 2020
+# Advent of Code 2020
 
+## Usage
 ```
 # Install
 poetry install
