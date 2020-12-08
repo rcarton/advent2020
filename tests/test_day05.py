@@ -1,5 +1,6 @@
 import pytest
-from advent.days.day05 import binary_partition_number, Seat, first
+
+from advent.days.day05 import Seat, binary_partition_number, first
 
 
 @pytest.mark.parametrize(
@@ -15,7 +16,7 @@ def test_binary_partition_number(pos_str, size, expected):
 
 
 @pytest.mark.parametrize(
-    "boarding_pass, row, column, id",
+    "boarding_pass, row, column, seat_id",
     [
         ("BFFFBBFRRR", 70, 7, 567),
         ("FFFBBBFRRR", 14, 7, 119),

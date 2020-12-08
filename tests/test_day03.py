@@ -1,12 +1,5 @@
-from advent.days.day03 import (
-    Grid,
-    Position,
-    count_trees_in_slope,
-    first,
-    get_cell,
-    get_grid,
-    second,
-)
+from advent.days.day03 import (Grid, Position, count_trees_in_slope, first,
+                               get_cell, get_grid, second)
 
 EXAMPLE = """..##.......
 #...#...#..

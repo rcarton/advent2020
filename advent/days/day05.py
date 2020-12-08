@@ -1,5 +1,5 @@
-from typing import Iterator
 from dataclasses import dataclass
+from typing import Iterator
 
 # 0 -> 127
 PLANE_ROWS = 128
