@@ -19,7 +19,19 @@ EXAMPLE = """35
 299
 277
 309
-576""".splitlines(keepends=True)
+576""".splitlines(
+    keepends=True
+)
+
 
 def test_find_first_invalid_num():
     assert day09.find_first_invalid_num([int(num.strip()) for num in EXAMPLE], 5) == 127
+
+
+def test_find_contiguous_sum_to():
+    assert day09.find_contiguous_sum_to([int(num.strip()) for num in EXAMPLE], 127) == [
+        15,
+        25,
+        47,
+        40,
+    ]
