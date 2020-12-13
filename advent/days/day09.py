@@ -27,7 +27,7 @@ def find_first_invalid_num(numbers: Iterator[int], preamble_size: int) -> int:
         last_numbers.pop(0)
         last_numbers.append(num)
 
-    raise ValueError('No invalid number found.')
+    raise ValueError("No invalid number found.")
 
 
 def is_valid(num, last_numbers):
