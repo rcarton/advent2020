@@ -62,8 +62,7 @@ class Waypoint:
     def rotate(self, left_or_right: str, degrees: int):
         # Because otherwise I have to do some long forgotten math
         if degrees % 90 != 0:
-            raise ValueError(
-                "This waypoint only rotates by multiples of 90 degrees")
+            raise ValueError("This waypoint only rotates by multiples of 90 degrees")
 
         # Rotating left by n degrees is the same as rotating right by -n
         if left_or_right == "L":
