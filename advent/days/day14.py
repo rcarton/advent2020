@@ -42,7 +42,7 @@ class DockingProgramRunner:
         # This mask is all 1s for all 36 bits except the values that should be switched to 0s
         # it will AND'd with the values written
         self.mask_0s = int(math.pow(2, PROGRAM_INT_BIT_SIZE)) - 1
-        self.mask = ''
+        self.mask = ""
 
         self.parse_program(program)
 
@@ -67,16 +67,14 @@ class DockingProgramRunner:
             command = m.group("command")
 
             if command == "mem":
-                m = re.match(
-                    r"^mem\[(?P<address>\d+)\] = (?P<value>\d+)$", line)
+                m = re.match(r"^mem\[(?P<address>\d+)\] = (?P<value>\d+)$", line)
                 if not m:
                     raise ValueError(f"Unable to parse line `{line}`")
 
                 address = m.group("address")
                 value = m.group("value")
 
-                self.instructions.append(
-                    (self.instr_write, [int(address), int(value)]))
+                self.instructions.append((self.instr_write, [int(address), int(value)]))
 
             elif command == "mask":
                 m = re.match(r"^mask = (?P<value>[X01]+)$", line)

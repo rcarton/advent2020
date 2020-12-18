@@ -29,11 +29,11 @@ def day(day_num: int) -> None:
     with open(input_filename) as reader:
         first_result = day_module.first(reader)
     first_t = time.perf_counter()
-    click.echo(f"First: {first_result} ({first_t - start_t:.2}s)")
+    click.echo(f"First: {first_result} ({first_t - start_t:.2f}s)")
 
     with open(input_filename) as reader:
         second_result = day_module.second(reader)
     second_t = time.perf_counter()
-    click.echo(f"Second: {second_result} ({second_t - first_t:.2}s)")
+    click.echo(f"Second: {second_result} ({second_t - first_t:.2f}s)")
 
-    click.echo(f"\n✨ Done ({second_t - start_t:.2}s) ✨")
+    click.echo(f"\n✨ Done ({second_t - start_t:.2f}s) ✨")

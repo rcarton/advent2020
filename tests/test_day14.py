@@ -32,8 +32,8 @@ def test_runner_mask():
 
     runner.instr_update_mask(mask)
 
-    assert runner.mask_0s == day14.binstr_to_int(mask.replace('X', '1'))
-    assert runner.mask_1s == day14.binstr_to_int(mask.replace('X', '0'))
+    assert runner.mask_0s == day14.binstr_to_int(mask.replace("X", "1"))
+    assert runner.mask_1s == day14.binstr_to_int(mask.replace("X", "0"))
 
     assert runner.apply_mask(11) == 73
     assert runner.apply_mask(101) == 101
@@ -63,4 +63,5 @@ def test_get_v2_masked_values():
 def test_overwrite_bit(num_str, bit_value, bit_position, expected):
     num = day14.binstr_to_int(num_str)
     assert str(bin(day14.overwrite_bit(num, bit_value, bit_position))) == str(
-        bin(day14.binstr_to_int(expected)))
+        bin(day14.binstr_to_int(expected))
+    )
