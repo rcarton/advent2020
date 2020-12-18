@@ -3,6 +3,14 @@ from typing import Iterator, List
 
 
 def number_spoken(starting_numbers: List[int], target_n: int) -> int:
+    """
+    See rules in the online prompt
+
+    At every turn a number is spoken which is the number of turns since
+    the last spoken numbers was said and the time before that.
+
+    Really, see the rules, it's a little too convoluted to explain.
+    """
     spoken = defaultdict(lambda: (None, None))
 
     # Initial numbers
@@ -29,14 +37,12 @@ def number_spoken(starting_numbers: List[int], target_n: int) -> int:
 
 
 def first(puzzle_input: Iterator[str]) -> int:
-    starting_numbers = [int(n)
-                        for n in list(puzzle_input)[0].strip().split(",")]
+    starting_numbers = [int(n) for n in list(puzzle_input)[0].strip().split(",")]
 
     return number_spoken(starting_numbers, 2020)
 
 
 def second(puzzle_input: Iterator[str]) -> int:
-    starting_numbers = [int(n)
-                        for n in list(puzzle_input)[0].strip().split(",")]
+    starting_numbers = [int(n) for n in list(puzzle_input)[0].strip().split(",")]
 
     return number_spoken(starting_numbers, 30000000)
