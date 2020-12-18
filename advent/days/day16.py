@@ -1,6 +1,6 @@
+import math
 import re
 from dataclasses import dataclass
-from functools import reduce
 from typing import Iterator, List, Tuple
 
 
@@ -169,4 +169,4 @@ def second(puzzle_input: Iterator[str]) -> int:
         value for i, value in enumerate(my_ticket) if i in departure_fields
     ]
 
-    return reduce(lambda prev, current: prev * current, my_ticket_departure_values, 1)
+    return math.prod(my_ticket_departure_values)
