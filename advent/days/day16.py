@@ -38,8 +38,7 @@ def parse_rule(rule_str: str) -> FieldRule:
         raise ValueError(f"Error parsing rule={rule_str}")
 
     name = m.group("name")
-    low_low, low_high, high_low, high_high = re.findall(
-        r"(\d+)", m.group("ranges"))
+    low_low, low_high, high_low, high_high = re.findall(r"(\d+)", m.group("ranges"))
 
     return FieldRule(
         name=name,
@@ -153,8 +152,7 @@ def second(puzzle_input: Iterator[str]) -> int:
         return all(any(r.validate(num) for r in rules) for num in ticket)
 
     # Remove invalid tickets
-    valid_tickets = [
-        ticket for ticket in nearby_tickets if is_valid_ticket(ticket)]
+    valid_tickets = [ticket for ticket in nearby_tickets if is_valid_ticket(ticket)]
 
     # Identify the rule that applies to every field
     rules_per_field = find_rules_for_tickets(valid_tickets, rules)

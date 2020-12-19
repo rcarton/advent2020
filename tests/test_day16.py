@@ -66,4 +66,4 @@ nearby tickets:
 
 
 def test_second():
-    assert day16.second(iter(EXAMPLE_2)) == 71
+    assert day16.second(iter(EXAMPLE_2)) == 1
