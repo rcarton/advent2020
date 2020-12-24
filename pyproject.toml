@@ -15,11 +15,13 @@ python = "^3.8"
 click = "^7.1.2"
 
 [tool.pylint.basic]
-good-names = "c,i,j,f,k,ex,_,df,m,g,pt,p,s,op,n,wp,t,x,a"
+good-names = "c,i,j,f,k,ex,_,df,m,g,pt,p,s,op,n,wp,t,x,a,d,td,y"
 disable = [
     "missing-module-docstring",
     "missing-function-docstring",
-    "missing-class-docstring"
+    "missing-class-docstring",
+    "invalid-name",
+    "too-few-public-methods"
 ]
 
 [tool.poetry.dev-dependencies]
