@@ -29,8 +29,7 @@ def get_row(data: List[str], num: int) -> int:
 
 def get_column(data: List[str], num: int) -> int:
     return int(
-        "".join("0" if data[y][num] ==
-                "." else "1" for y in range(len(data))), 2
+        "".join("0" if data[y][num] == "." else "1" for y in range(len(data))), 2
     )
 
 
@@ -290,8 +289,7 @@ def solve_image(tiles: List[Tile]) -> List[TileState]:
         tile_i = len(candidate.tiles)
 
         # Is there a tile to the left
-        left_tile = candidate.get_tile(
-            tile_i - 1) if (tile_i % width) != 0 else None
+        left_tile = candidate.get_tile(tile_i - 1) if (tile_i % width) != 0 else None
         top_tile = candidate.get_tile(tile_i - width)
 
         possible_tilestates = set()
@@ -334,7 +332,7 @@ def make_image(tilestates: List[TileState]) -> List[str]:
 
     for tile_row in range(0, width):
         tile_data = [
-            t.data for t in tilestates[tile_row * width: tile_row * width + width]
+            t.data for t in tilestates[tile_row * width : tile_row * width + width]
         ]
 
         for i in range(1, tile_width - 1):
