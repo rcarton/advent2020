@@ -1,8 +1,16 @@
 import pytest
 
-from advent.days.day20 import (find_corners, first, flip, is_there_a_monster,
-                               make_image, parse_input, rotate, second,
-                               solve_image)
+from advent.days.day20 import (
+    find_corners,
+    first,
+    flip,
+    is_there_a_monster,
+    make_image,
+    parse_input,
+    rotate,
+    second,
+    solve_image,
+)
 
 EXAMPLE = """Tile 2311:
 ..##.#..#.

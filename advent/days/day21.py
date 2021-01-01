@@ -8,7 +8,7 @@ def parse_line(line: str) -> Tuple[Set[str], Set[str]]:
     ingredients_str, allergens_str = line.strip().split("(")
 
     ingredients = ingredients_str.strip().split()
-    allergens = allergens_str[len("contains "): -1].split(", ")
+    allergens = allergens_str[len("contains ") : -1].split(", ")
 
     return (set(ingredients), set(allergens))
 
